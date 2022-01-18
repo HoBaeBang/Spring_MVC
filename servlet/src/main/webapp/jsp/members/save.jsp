@@ -1,6 +1,7 @@
 <%@ page import="hello.servlet.domain.member.MemberRepository" %>
 <%@ page import="hello.servlet.domain.member.Member" %>
-<%@ page import="java.io.PrintWriter" %><%
+<%@ page import="java.io.PrintWriter" %>
+<%
     MemberRepository memberRepository = MemberRepository.getInstance();
 
     String username = request.getParameter("username");
