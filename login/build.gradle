@@ -12,9 +12,22 @@ repositories {
 	mavenCentral()
 }
 
-dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+dependencies {	//스프링 부트, 스프링 시큐리티, 스프링 데이터jpa, lombok을 사용한다.
+
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'			//스프링 데이터 jpa
+	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'		//oauth2를 이용한 소셜 회원 관리
+	implementation 'org.springframework.boot:spring-boot-starter-web'				//스프링 웹
+	implementation 'org.springframework.boot:spring-boot-starter-security'			//스프링 시큐리티
+	implementation 'org.springframework.boot:spring-boot-starter-tomcat'
+	implementation 'com.h2database:h2'												//h2
+	implementation 'com.googlecode.json-simple:json-simple:1.1.1'					//json을 사용하기 위한 라이브러리
+	implementation 'com.fasterxml.jackson.core:jackson-databind'					//jsom이용을 위한 jackson
+	implementation 'io.jsonwebtoken:jjwt:0.9.1'										//webtoken
+
+	compileOnly 'org.projectlombok:lombok'											//lombok
+
+	annotationProcessor 'org.projectlombok:lombok'									//lonbok
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'			//
 }
 
 tasks.named('test') {
